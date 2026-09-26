@@ -6,8 +6,10 @@
     "navigationBarTitleText": "车马慢",
     "navigationBarBackgroundColor": "#f5f1e8",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#f5f1e8"
+    "backgroundColor": "#f5f1e8",
+    "pageOrientation": "auto"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "resizable": true
 }

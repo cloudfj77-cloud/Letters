@@ -20,17 +20,17 @@
   <view class="page-head"><text class="eyebrow">A LETTER, JUST FOR YOU</text><view class="page-title">见字如面</view><text class="small">把今天没说完的话，慢慢写下来。</text></view>
   <view class="section">
    <view wx:if="{{relation !== 'accepted'}}" class="relationship"><text>请先到信箱邀请对方，并切换身份接受。</text><button bindtap="onTab" data-tab="home">去邀请 →</button></view>
-   <view class="paper"><view class="salutation">致 {{partner.name}}：</view><textarea value="{{draft}}" maxlength="2000" bindinput="onDraft" placeholder="今天，有什么想告诉你……" auto-height="{{true}}" cursor-spacing="40"/><view class="signature">写信人 / {{me.name}}</view></view>
-   <view class="counter">{{draft.length}} / 2000 · 自动存为本机草稿</view>
+   <view class="compose-layout"><view class="writing-area"><view class="paper"><view class="salutation">致 {{partner.name}}：</view><textarea value="{{draft}}" maxlength="2000" bindinput="onDraft" placeholder="今天，有什么想告诉你……" auto-height="{{true}}" cursor-spacing="40"/><view class="signature">写信人 / {{me.name}}</view></view>
+   <view class="counter">{{draft.length}} / 2000 · 自动存为本机草稿</view></view><view class="delivery-area">
    <view class="label-row"><text>让谁替你送这封信？</text><button class="small" bindtap="settings">体验位置 ↗</button></view>
    <view class="couriers"><button wx:for="{{couriers}}" wx:key="id" class="courier {{selected === item.id ? 'selected' : ''}}" disabled="{{item.disabled}}" bindtap="onCourier" data-id="{{item.id}}"><image src="/assets/{{item.asset}}"/><view>{{item.name}}</view><text class="small">{{item.disabled ? '跨海不可选' : item.displaySpeed + ' km/h'}}</text></button></view>
    <view class="quote"><view class="row"><text>{{quote.from}} → {{quote.to}}</text><text>{{quote.km}} km</text></view><view class="row"><text>{{quote.courier}} · {{quote.speed}} km/h</text><text>需 {{quote.duration}}</text></view><view class="row"><text>预计抵达</text><text>{{quote.eta}}</text></view><view class="quote-note">寄出后，终点与抵达时间固定。</view></view>
-   <button class="btn" disabled="{{relation !== 'accepted'}}" bindtap="prepare">封好这封信 →</button><button class="rules" bindtap="rules">体验版的距离与速度怎么算？</button>
+   <button class="btn" disabled="{{relation !== 'accepted'}}" bindtap="prepare">封好这封信 →</button><button class="rules" bindtap="rules">体验版的距离与速度怎么算？</button></view></view>
   </view>
  </block>
  <block wx:else>
   <view class="page-head"><text class="eyebrow">YOUR LITTLE MESSENGERS</text><view class="page-title">替你走过山海</view><text class="small">每一程，都带着一点你的心意。</text></view>
-  <view class="section"><view wx:for="{{couriers}}" wx:key="id" class="stable-card"><view class="portrait"><image src="/assets/{{item.asset}}"/></view><view class="stable-copy"><view class="animal-name">{{item.name}}<text class="tag">{{item.tag}}</text></view><view class="small">{{item.desc}}</view><view class="small">{{item.displaySpeed}} km/h · 已托付 {{item.count}} 封信</view><button bindtap="choose" data-id="{{item.id}}">请它送一封 →</button></view></view><view class="note">此版先体验选择信使与送信记录。共同饲养、成长和返程，留待一起慢慢设计。</view><button class="rules" bindtap="rules">了解参考速度与计算方式</button></view>
+  <view class="section"><view class="stable-grid"><view wx:for="{{couriers}}" wx:key="id" class="stable-card"><view class="portrait"><image src="/assets/{{item.asset}}"/></view><view class="stable-copy"><view class="animal-name">{{item.name}}<text class="tag">{{item.tag}}</text></view><view class="small">{{item.desc}}</view><view class="small">{{item.displaySpeed}} km/h · 已托付 {{item.count}} 封信</view><button bindtap="choose" data-id="{{item.id}}">请它送一封 →</button></view></view></view><view class="note">此版先体验选择信使与送信记录。共同饲养、成长和返程，留待一起慢慢设计。</view><button class="rules" bindtap="rules">了解参考速度与计算方式</button></view>
  </block>
  <view class="nav"><button class="{{tab === 'home' ? 'active' : ''}}" bindtap="onTab" data-tab="home"><view>▱</view>信箱</button><button class="{{tab === 'write' ? 'active' : ''}}" bindtap="onTab" data-tab="write"><view>✎</view>写信</button><button class="{{tab === 'stable' ? 'active' : ''}}" bindtap="onTab" data-tab="stable"><view>♧</view>马厩</button></view>
  <view wx:if="{{dialog}}" class="overlay" bindtap="close"><scroll-view scroll-y class="modal" catchtap="stop"><view class="modal-top"><text>{{dialog === 'settings' ? '体验设置' : dialog === 'send' ? '把心意交给它' : modalTitle}}</text><button class="round" bindtap="close">×</button></view>

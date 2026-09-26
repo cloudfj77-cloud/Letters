@@ -1,1 +1,144 @@
-page{background:#f5f1e8;color:#35432f;font-family:-apple-system,"PingFang SC",sans-serif;font-size:26rpx;line-height:1.6}button{margin:0;padding:0;font:inherit;color:inherit;background:transparent;line-height:inherit;border-radius:0}button::after{border:0}button[disabled]{opacity:.4;color:inherit;background:transparent}image{display:block}.shell{padding-bottom:180rpx}.header{padding:30rpx 48rpx;display:flex;justify-content:space-between;align-items:center}.brand{display:flex;align-items:center;gap:20rpx}.seal{font-family:serif;color:#a65f45;border:1px solid #a65f45;font-size:34rpx;width:50rpx;text-align:center;transform:rotate(-4deg)}.brand-name{font-family:"Songti SC",serif;font-size:42rpx;letter-spacing:6rpx}.round{border:1px solid #dedbcc;width:56rpx;height:56rpx;border-radius:50%;font-size:32rpx;text-align:center;line-height:52rpx}.demo{background:#e9ecdf;color:#748169;display:flex;justify-content:space-between;padding:10rpx 48rpx;font-size:20rpx}.demo button{font-size:20rpx}.hero{height:490rpx;position:relative;overflow:hidden}.landscape{position:absolute;width:100%;height:360rpx;bottom:0}.hero-copy{position:absolute;z-index:1;top:45rpx;left:48rpx}.eyebrow{font-size:17rpx;letter-spacing:4rpx;color:#8b8b78}.hero-title{font-family:"Songti SC",serif;font-size:52rpx;line-height:1.6;letter-spacing:5rpx;white-space:pre-line;margin:15rpx 0}.subtle,.small{font-size:21rpx;color:#8b8b78}.hero-horse{position:absolute;width:150rpx;height:120rpx;bottom:15rpx;left:55%}.section{padding:36rpx 48rpx}.section-title{display:flex;justify-content:space-between;align-items:center;font-family:"Songti SC",serif;font-size:31rpx;letter-spacing:3rpx}.filters{display:flex;gap:40rpx;border-bottom:1px solid #dedbcc;margin:26rpx 0 32rpx}.filters button{font-size:23rpx;color:#8b8b78;padding:14rpx 0 18rpx;border-bottom:2px solid transparent}.filters .active{color:#35432f;border-color:#35432f}.letter-card{background:#fffdf7;border:1px solid #dfdcca;border-left:4px solid #cbd4bc;padding:32rpx;margin-bottom:28rpx;border-radius:6rpx}.letter-top{display:flex;justify-content:space-between}.letter-title{font-family:"Songti SC",serif;font-size:35rpx;margin:7rpx 0 10rpx;letter-spacing:3rpx}.stamp{border:1px dashed #a7b299;background:#eef0e5;padding:6rpx;width:68rpx;text-align:center;font-family:serif;font-size:18rpx}.stamp image{width:64rpx;height:50rpx}.letter-foot{display:flex;justify-content:space-between;border-top:1px solid #edeadd;padding-top:23rpx;margin-top:32rpx;font-size:20rpx}.progress{height:5rpx;background:#e4e8dc;margin-top:20rpx}.progress view{height:100%;background:#91a17f}.relationship{display:flex;justify-content:space-between;gap:15rpx;align-items:center;padding:20rpx;background:#e9ecdf;font-size:20rpx;margin:28rpx 0;border-radius:6rpx}.relationship button{font-size:20rpx;flex-shrink:0;border-bottom:1px solid #89977d}.btn{display:block;padding:23rpx;border-radius:6rpx;background:#35432f;color:#f5f1e8;font-size:25rpx;letter-spacing:3rpx;text-align:center}.btn[disabled]{background:#35432f;color:#f5f1e8}.btn.light{background:transparent;color:#35432f;border:1px solid #bcc3ae}.quiet{font-size:20rpx;color:#9b9b88;text-align:center;margin-top:22rpx}.empty{text-align:center;padding:40rpx 0;font-family:"Songti SC",serif;color:#8b8b78}.empty-icon{font-size:52rpx;color:#a8ae96;margin-bottom:10rpx}.page-head{padding:44rpx 48rpx 0}.page-title{font-family:"Songti SC",serif;font-size:45rpx;letter-spacing:4rpx;margin:8rpx 0 12rpx}.paper{background:#fffdf7;border:1px solid #dedbcc;padding:32rpx;border-radius:6rpx}.salutation{font-family:"Songti SC",serif;font-size:32rpx;margin-bottom:18rpx}.paper textarea{width:100%;min-height:350rpx;line-height:60rpx;font-family:"Songti SC",serif;font-size:29rpx;background:repeating-linear-gradient(transparent,transparent 58rpx,#e7e4d7 60rpx);color:#535644}.signature{font-family:"Songti SC",serif;text-align:right;font-size:24rpx;color:#8b8b78;margin-top:25rpx;white-space:pre-line}.counter{text-align:right;color:#8b8b78;font-size:18rpx;margin-top:10rpx}.label-row{display:flex;justify-content:space-between;margin:40rpx 0 20rpx;font-size:24rpx}.couriers{display:flex;gap:14rpx;margin-bottom:28rpx}.courier{flex:1;background:#f9f7ef;border:1px solid #dedbcc;border-radius:6rpx;padding:16rpx 4rpx;text-align:center;font-family:"Songti SC",serif;font-size:30rpx}.courier.selected{background:#e9ecdf;border-color:#647555}.courier image{width:126rpx;height:105rpx;margin:auto}.courier .small{font-family:sans-serif;font-size:18rpx}.quote{padding:24rpx 28rpx;background:#e9ecdf;border-radius:6rpx;margin-bottom:28rpx;font-size:23rpx}.row{display:flex;justify-content:space-between;gap:14rpx;margin:8rpx 0}.quote-note{border-top:1px solid #d6ddc9;margin-top:18rpx;padding-top:14rpx;font-size:18rpx;color:#7f8a70}.rules{text-align:left;font-size:20rpx;color:#8b8b78;margin:26rpx 0}.stable-card{display:flex;gap:28rpx;align-items:center;padding:37rpx 0;border-bottom:1px solid #dedbcc}.portrait{width:200rpx;height:200rpx;border-radius:50%;background:#e7e9dc;display:flex;align-items:center;justify-content:center;flex-shrink:0}.portrait image{width:205rpx;height:173rpx}.stable-copy{flex:1;min-width:0}.stable-copy .small{margin-top:10rpx;line-height:1.9}.animal-name{font-family:"Songti SC",serif;font-size:41rpx}.tag{font-family:sans-serif;font-size:17rpx;border:1px solid #c8cdb9;padding:3rpx 9rpx;margin-left:12rpx;vertical-align:middle;color:#849071}.stable-copy button{text-align:left;font-size:21rpx;margin-top:12rpx;text-decoration:underline;text-underline-offset:6rpx}.note{font-size:22rpx;color:#8b8b78;line-height:1.9;margin:28rpx 0}.nav{position:fixed;bottom:0;left:0;right:0;border-top:1px solid #dedbcc;background:#f5f1e8;padding:18rpx 30rpx;padding-bottom:calc(25rpx + env(safe-area-inset-bottom));display:flex;z-index:5}.nav button{flex:1;color:#9b9d8a;font-size:20rpx;letter-spacing:4rpx}.nav button.active{color:#35432f}.nav button view{font-family:serif;font-size:42rpx;line-height:52rpx}.overlay{position:fixed;inset:0;background:#24302088;display:flex;align-items:center;justify-content:center;padding:36rpx;z-index:10}.modal{width:100%;max-height:85vh;background:#f5f1e8;border-radius:16rpx;padding:40rpx;box-sizing:border-box}.modal-top{display:flex;justify-content:space-between;align-items:center;font-family:"Songti SC",serif;font-size:39rpx;margin-bottom:26rpx}.picker-label{font-size:23rpx;margin:28rpx 0 10rpx}.picker{border:1px solid #dedbcc;background:#fffdf7;padding:18rpx;border-radius:6rpx}.read-body{font-family:"Songti SC",serif;font-size:31rpx;line-height:2.2;white-space:pre-wrap;word-break:break-all;display:block;margin:30rpx 0}.journey{position:relative;height:290rpx;overflow:hidden}.journey-animal{position:absolute;width:140rpx;height:118rpx;bottom:0;left:54%}
+page{background:#f5f1e8;color:#35432f;font-family:-apple-system,"PingFang SC",sans-serif;font-size:13px;line-height:1.6}
+button{margin:0;padding:0;font:inherit;color:inherit;background:transparent;line-height:inherit;border-radius:0}
+button::after{border:0}
+button[disabled]{opacity:.4;color:inherit;background:transparent}
+image{display:block}
+.shell{padding-bottom:90px}
+.header{padding:15px 24px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:10px}
+.seal{font-family:serif;color:#a65f45;border:1px solid #a65f45;font-size:17px;width:25px;text-align:center;transform:rotate(-4deg)}
+.brand-name{font-family:"Songti SC",serif;font-size:21px;letter-spacing:3px}
+.round{border:1px solid #dedbcc;width:28px;height:28px;border-radius:50%;font-size:16px;text-align:center;line-height:26px}
+.demo{background:#e9ecdf;color:#748169;display:flex;justify-content:space-between;padding:5px 24px;font-size:10px}
+.demo button{font-size:10px}
+.hero{height:245px;position:relative;overflow:hidden}
+.landscape{position:absolute;width:100%;height:180px;bottom:0}
+.hero-copy{position:absolute;z-index:1;top:22.5px;left:24px}
+.eyebrow{font-size:8.5px;letter-spacing:2px;color:#8b8b78}
+.hero-title{font-family:"Songti SC",serif;font-size:26px;line-height:1.6;letter-spacing:2.5px;white-space:pre-line;margin:7.5px 0}
+.subtle,.small{font-size:10.5px;color:#8b8b78}
+.hero-horse{position:absolute;width:75px;height:60px;bottom:7.5px;left:55%}
+.section{padding:18px 24px}
+.section-title{display:flex;justify-content:space-between;align-items:center;font-family:"Songti SC",serif;font-size:15.5px;letter-spacing:1.5px}
+.filters{display:flex;gap:20px;border-bottom:1px solid #dedbcc;margin:13px 0 16px}
+.filters button{font-size:11.5px;color:#8b8b78;padding:7px 0 9px;border-bottom:2px solid transparent}
+.filters .active{color:#35432f;border-color:#35432f}
+.letter-card{background:#fffdf7;border:1px solid #dfdcca;border-left:4px solid #cbd4bc;padding:16px;margin-bottom:14px;border-radius:3px}
+.letter-top{display:flex;justify-content:space-between}
+.letter-title{font-family:"Songti SC",serif;font-size:17.5px;margin:3.5px 0 5px;letter-spacing:1.5px}
+.stamp{border:1px dashed #a7b299;background:#eef0e5;padding:3px;width:34px;text-align:center;font-family:serif;font-size:9px}
+.stamp image{width:32px;height:25px}
+.letter-foot{display:flex;justify-content:space-between;border-top:1px solid #edeadd;padding-top:11.5px;margin-top:16px;font-size:10px}
+.progress{height:2.5px;background:#e4e8dc;margin-top:10px}
+.progress view{height:100%;background:#91a17f}
+.relationship{display:flex;justify-content:space-between;gap:7.5px;align-items:center;padding:10px;background:#e9ecdf;font-size:10px;margin:14px 0;border-radius:3px}
+.relationship button{font-size:10px;flex-shrink:0;border-bottom:1px solid #89977d}
+.btn{display:block;padding:11.5px;border-radius:3px;background:#35432f;color:#f5f1e8;font-size:12.5px;letter-spacing:1.5px;text-align:center}
+.btn[disabled]{background:#35432f;color:#f5f1e8}
+.btn.light{background:transparent;color:#35432f;border:1px solid #bcc3ae}
+.quiet{font-size:10px;color:#9b9b88;text-align:center;margin-top:11px}
+.empty{text-align:center;padding:20px 0;font-family:"Songti SC",serif;color:#8b8b78}
+.empty-icon{font-size:26px;color:#a8ae96;margin-bottom:5px}
+.page-head{padding:22px 24px 0}
+.page-title{font-family:"Songti SC",serif;font-size:22.5px;letter-spacing:2px;margin:4px 0 6px}
+.paper{background:#fffdf7;border:1px solid #dedbcc;padding:16px;border-radius:3px}
+.salutation{font-family:"Songti SC",serif;font-size:16px;margin-bottom:9px}
+.paper textarea{width:100%;min-height:175px;line-height:30px;font-family:"Songti SC",serif;font-size:14.5px;background:repeating-linear-gradient(transparent,transparent 29px,#e7e4d7 30px);color:#535644}
+.signature{font-family:"Songti SC",serif;text-align:right;font-size:12px;color:#8b8b78;margin-top:12.5px;white-space:pre-line}
+.counter{text-align:right;color:#8b8b78;font-size:9px;margin-top:5px}
+.label-row{display:flex;justify-content:space-between;margin:20px 0 10px;font-size:12px}
+.couriers{display:flex;gap:7px;margin-bottom:14px}
+.courier{flex:1;background:#f9f7ef;border:1px solid #dedbcc;border-radius:3px;padding:8px 2px;text-align:center;font-family:"Songti SC",serif;font-size:15px}
+.courier.selected{background:#e9ecdf;border-color:#647555}
+.courier image{width:63px;height:52.5px;margin:auto}
+.courier .small{font-family:sans-serif;font-size:9px}
+.quote{padding:12px 14px;background:#e9ecdf;border-radius:3px;margin-bottom:14px;font-size:11.5px}
+.row{display:flex;justify-content:space-between;gap:7px;margin:4px 0}
+.quote-note{border-top:1px solid #d6ddc9;margin-top:9px;padding-top:7px;font-size:9px;color:#7f8a70}
+.rules{text-align:left;font-size:10px;color:#8b8b78;margin:13px 0}
+.stable-card{display:flex;gap:14px;align-items:center;padding:18.5px 0;border-bottom:1px solid #dedbcc}
+.portrait{width:100px;height:100px;border-radius:50%;background:#e7e9dc;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.portrait image{width:102.5px;height:86.5px}
+.stable-copy{flex:1;min-width:0}
+.stable-copy .small{margin-top:5px;line-height:1.9}
+.animal-name{font-family:"Songti SC",serif;font-size:20.5px}
+.tag{font-family:sans-serif;font-size:8.5px;border:1px solid #c8cdb9;padding:1.5px 4.5px;margin-left:6px;vertical-align:middle;color:#849071}
+.stable-copy button{text-align:left;font-size:10.5px;margin-top:6px;text-decoration:underline;text-underline-offset:3px}
+.note{font-size:11px;color:#8b8b78;line-height:1.9;margin:14px 0}
+.nav{position:fixed;bottom:0;left:0;right:0;border-top:1px solid #dedbcc;background:#f5f1e8;padding:9px 15px;padding-bottom:calc(12.5px + env(safe-area-inset-bottom));display:flex;z-index:5}
+.nav button{flex:1;color:#9b9d8a;font-size:10px;letter-spacing:2px}
+.nav button.active{color:#35432f}
+.nav button view{font-family:serif;font-size:21px;line-height:26px}
+.overlay{position:fixed;inset:0;background:#24302088;display:flex;align-items:center;justify-content:center;padding:18px;z-index:10}
+.modal{width:100%;max-height:85vh;background:#f5f1e8;border-radius:8px;padding:20px;box-sizing:border-box}
+.modal-top{display:flex;justify-content:space-between;align-items:center;font-family:"Songti SC",serif;font-size:19.5px;margin-bottom:13px}
+.picker-label{font-size:11.5px;margin:14px 0 5px}
+.picker{border:1px solid #dedbcc;background:#fffdf7;padding:9px;border-radius:3px}
+.read-body{font-family:"Songti SC",serif;font-size:15.5px;line-height:2.2;white-space:pre-wrap;word-break:break-all;display:block;margin:15px 0}
+.journey{position:relative;height:145px;overflow:hidden}
+.journey-animal{position:absolute;width:70px;height:59px;bottom:0;left:54%}
+
+
+/* Keep type and controls readable on large windows; center the writing surface. */
+page { font-size: 14px; }
+view, button, textarea, scroll-view { box-sizing: border-box; }
+.shell { width: 100%; max-width: 880px; margin: 0 auto; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
+.header { padding: 16px 24px; }
+.round { min-width: 44px; min-height: 44px; line-height: 42px; }
+.demo { min-height: 36px; align-items: center; font-size: 12px; }
+.demo button { min-height: 32px; line-height: 32px; font-size: 12px; }
+.small, .subtle, .quiet { font-size: 12px; }
+.section-title { flex-wrap: wrap; gap: 10px; }
+.filters button { min-height: 44px; font-size: 13px; }
+.letter-top { gap: 12px; }
+.letter-top > view:first-child { min-width: 0; word-break: break-all; }
+.stamp { flex-shrink: 0; }
+.letter-foot, .row, .label-row, .relationship { flex-wrap: wrap; gap: 10px; }
+.relationship { font-size: 12px; }
+.relationship button { min-height: 32px; font-size: 12px; }
+.btn { min-height: 48px; font-size: 14px; }
+.courier { min-width: 0; }
+.courier .small { font-size: 11px; }
+.tag { display: inline-block; white-space: nowrap; }
+.stable-copy button { min-height: 44px; font-size: 13px; }
+.paper textarea { font-size: 16px; min-height: 240px; }
+.rules { min-height: 44px; line-height: 1.8; font-size: 12px; }
+.note { font-size: 13px; }
+.nav { left: 50%; right: auto; transform: translateX(-50%); width: 100%; max-width: 880px; padding-top: 6px; }
+.nav button { min-height: 48px; font-size: 12px; }
+.modal { max-width: 520px; max-height: 88vh; }
+.picker { min-height: 44px; font-size: 16px; }
+.modal-top { gap: 12px; }
+@media (min-width: 700px) {
+ .hero { height: 280px; }
+ .landscape { height: 230px; }
+ .hero-horse { left: 64%; }
+ .section, .page-head { padding-left: 32px; padding-right: 32px; }
+ .compose-layout { display: flex; align-items: flex-start; gap: 26px; }
+ .writing-area { flex: 1.15; min-width: 0; }
+ .delivery-area { flex: 1; min-width: 0; }
+ .delivery-area .label-row { margin-top: 0; }
+ .paper textarea { min-height: 330px; }
+ .stable-grid { display: flex; gap: 18px; }
+ .stable-card { flex: 1; min-width: 0; flex-direction: column; align-items: flex-start; border: 1px solid #dedbcc; padding: 20px; border-radius: 6px; }
+ .animal-name { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+ .tag { margin-left: 0; }
+}
+@media (max-width: 359px) {
+ .header, .section, .page-head { padding-left: 16px; padding-right: 16px; }
+ .hero-copy { left: 16px; }
+ .eyebrow { font-size: 9px; letter-spacing: 2px; }
+ .portrait { width: 82px; height: 82px; }
+ .portrait image { width: 86px; height: 74px; }
+ .stable-card { gap: 14px; }
+ .animal-name { font-size: 21px; }
+ .courier image { width: 55px; height: 48px; }
+}
+@media (max-height: 540px) and (min-width: 600px) {
+ .hero { height: 210px; }
+ .header { padding-top: 8px; padding-bottom: 8px; }
+ .nav { padding-top: 2px; padding-bottom: 2px; }
+ .nav button { min-height: 40px; }
+ .nav button view { display: inline; margin-right: 8px; font-size: 21px; }
+ .overlay { padding: 12px; }
+}
