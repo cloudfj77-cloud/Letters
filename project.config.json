@@ -1,0 +1,14 @@
+{
+  "description": "车马慢：真实距离，让心意慢慢抵达",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "appid": "touristappid",
+  "projectname": "车马慢",
+  "setting": {
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": true
+  },
+  "condition": {}
+}

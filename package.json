@@ -1,0 +1,10 @@
+{
+  "name": "chema-man",
+  "version": "0.1.0",
+  "private": true,
+  "description": "车马慢 · 微信小程序与本地交互预览",
+  "scripts": {
+    "start": "node preview/server.js",
+    "test": "node --test tests/model.test.js"
+  }
+}

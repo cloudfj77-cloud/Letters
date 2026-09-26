@@ -1,0 +1,9 @@
+{
+  "desc": "本地体验版本",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

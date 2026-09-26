@@ -1,0 +1,42 @@
+<view class="shell">
+ <view class="header"><view class="brand"><text class="seal">信</text><text class="brand-name">车马慢</text></view><button class="round" bindtap="settings">☷</button></view>
+ <view class="demo"><text>本机体验 · {{me.name}}</text><button bindtap="switchRole">切换身份 ⇄</button></view>
+ <block wx:if="{{tab === 'home'}}">
+  <view class="hero"><image class="landscape" src="/assets/landscape.svg" mode="aspectFill"/><view class="hero-copy"><text class="eyebrow">LETTERS TAKE THEIR TIME</text><view class="hero-title">有一份惦记，<view>还在路上。</view></view><text class="subtle">慢一点，心意也会好好抵达。</text></view><image class="hero-horse" src="/assets/horse-chestnut.svg"/></view>
+  <view class="section">
+   <view class="section-title"><text>两个人的信箱</text><text class="small">{{me.name}}</text></view>
+   <view class="filters"><button class="{{filter === 'road' ? 'active' : ''}}" bindtap="onFilter" data-filter="road">在路上 {{counts.road}}</button><button class="{{filter === 'received' ? 'active' : ''}}" bindtap="onFilter" data-filter="received">已收到 {{counts.received}}</button><button class="{{filter === 'sent' ? 'active' : ''}}" bindtap="onFilter" data-filter="sent">已寄出 {{counts.sent}}</button></view>
+   <view wx:for="{{letters}}" wx:key="id" class="letter-card" bindtap="openLetter" data-id="{{item.id}}">
+    <view class="letter-top"><view><view class="small">{{item.sample ? '示例信件 · 可以拆开看看' : item.arrived ? '心意已抵达' : '心意正在路上'}}</view><view class="letter-title">{{filter === 'sent' ? '寄给 ' + item.toName : item.fromName + ' 寄来的信'}}</view><text class="small">{{item.fromCity}} → {{item.toCity}} · {{item.km}} km</text></view><view class="stamp"><image src="/assets/{{item.asset}}"/><text>尺素</text></view></view>
+    <view wx:if="{{!item.arrived}}" class="progress"><view style="width: {{item.progress}}%"/></view>
+    <view class="letter-foot"><text>{{item.arrived ? '心意已经抵达' : item.eta + ' 抵达'}}</text><text>{{item.arrived ? '拆开看看 ↗' : '看看旅程 ↗'}}</text></view>
+   </view>
+   <view wx:if="{{!letters.length}}" class="empty"><view class="empty-icon">✉</view><view>{{filter === 'road' ? '此刻，路上还没有新的信。' : filter === 'sent' ? '第一封信，从你开始。' : '信箱空着，也装得下期待。'}}</view></view>
+   <view class="relationship"><text>{{relation === 'accepted' ? '与 ' + partner.name + ' 的体验信箱已连通' : relation === 'none' ? '让第一封信，有一个去处。' : canAccept ? partner.name + ' 邀请你互相寄信' : '体验邀请已发出'}}</text><button wx:if="{{relation === 'none'}}" bindtap="invite">邀请对方 →</button><button wx:elif="{{canAccept}}" bindtap="accept">接受邀请 →</button><button wx:elif="{{relation === 'pending'}}" bindtap="switchRole">切换身份 →</button></view>
+   <button class="btn" bindtap="onTab" data-tab="write">✎　写一封信</button><view class="quiet">不必急着回，只要记得你。</view>
+  </view>
+ </block>
+ <block wx:elif="{{tab === 'write'}}">
+  <view class="page-head"><text class="eyebrow">A LETTER, JUST FOR YOU</text><view class="page-title">见字如面</view><text class="small">把今天没说完的话，慢慢写下来。</text></view>
+  <view class="section">
+   <view wx:if="{{relation !== 'accepted'}}" class="relationship"><text>请先到信箱邀请对方，并切换身份接受。</text><button bindtap="onTab" data-tab="home">去邀请 →</button></view>
+   <view class="paper"><view class="salutation">致 {{partner.name}}：</view><textarea value="{{draft}}" maxlength="2000" bindinput="onDraft" placeholder="今天，有什么想告诉你……" auto-height="{{true}}" cursor-spacing="40"/><view class="signature">写信人 / {{me.name}}</view></view>
+   <view class="counter">{{draft.length}} / 2000 · 自动存为本机草稿</view>
+   <view class="label-row"><text>让谁替你送这封信？</text><button class="small" bindtap="settings">体验位置 ↗</button></view>
+   <view class="couriers"><button wx:for="{{couriers}}" wx:key="id" class="courier {{selected === item.id ? 'selected' : ''}}" disabled="{{item.disabled}}" bindtap="onCourier" data-id="{{item.id}}"><image src="/assets/{{item.asset}}"/><view>{{item.name}}</view><text class="small">{{item.disabled ? '跨海不可选' : item.displaySpeed + ' km/h'}}</text></button></view>
+   <view class="quote"><view class="row"><text>{{quote.from}} → {{quote.to}}</text><text>{{quote.km}} km</text></view><view class="row"><text>{{quote.courier}} · {{quote.speed}} km/h</text><text>需 {{quote.duration}}</text></view><view class="row"><text>预计抵达</text><text>{{quote.eta}}</text></view><view class="quote-note">寄出后，终点与抵达时间固定。</view></view>
+   <button class="btn" disabled="{{relation !== 'accepted'}}" bindtap="prepare">封好这封信 →</button><button class="rules" bindtap="rules">体验版的距离与速度怎么算？</button>
+  </view>
+ </block>
+ <block wx:else>
+  <view class="page-head"><text class="eyebrow">YOUR LITTLE MESSENGERS</text><view class="page-title">替你走过山海</view><text class="small">每一程，都带着一点你的心意。</text></view>
+  <view class="section"><view wx:for="{{couriers}}" wx:key="id" class="stable-card"><view class="portrait"><image src="/assets/{{item.asset}}"/></view><view class="stable-copy"><view class="animal-name">{{item.name}}<text class="tag">{{item.tag}}</text></view><view class="small">{{item.desc}}</view><view class="small">{{item.displaySpeed}} km/h · 已托付 {{item.count}} 封信</view><button bindtap="choose" data-id="{{item.id}}">请它送一封 →</button></view></view><view class="note">此版先体验选择信使与送信记录。共同饲养、成长和返程，留待一起慢慢设计。</view><button class="rules" bindtap="rules">了解参考速度与计算方式</button></view>
+ </block>
+ <view class="nav"><button class="{{tab === 'home' ? 'active' : ''}}" bindtap="onTab" data-tab="home"><view>▱</view>信箱</button><button class="{{tab === 'write' ? 'active' : ''}}" bindtap="onTab" data-tab="write"><view>✎</view>写信</button><button class="{{tab === 'stable' ? 'active' : ''}}" bindtap="onTab" data-tab="stable"><view>♧</view>马厩</button></view>
+ <view wx:if="{{dialog}}" class="overlay" bindtap="close"><scroll-view scroll-y class="modal" catchtap="stop"><view class="modal-top"><text>{{dialog === 'settings' ? '体验设置' : dialog === 'send' ? '把心意交给它' : modalTitle}}</text><button class="round" bindtap="close">×</button></view>
+  <block wx:if="{{dialog === 'settings'}}"><view class="note">这是本机的双人模拟，不会向真实微信好友发送消息。切换身份，体验彼此寄信。</view><button class="btn light" bindtap="switchRole">切换为 {{partner.name}}</button><view class="picker-label">阿禾的体验城市</view><picker range="{{cities}}" range-key="name" value="{{cityA}}" data-role="a" bindchange="cityChange"><view class="picker">{{cityAName}}　⌄</view></picker><view class="picker-label">小满的体验城市</view><picker range="{{cities}}" range-key="name" value="{{cityB}}" data-role="b" bindchange="cityChange"><view class="picker">{{cityBName}}　⌄</view></picker><view class="note">城市参考坐标，非实时定位。修改城市只影响之后寄出的信。</view></block>
+  <block wx:elif="{{dialog === 'send'}}"><view class="quote"><view class="row"><text>{{quote.from}} → {{quote.to}}</text><text>{{quote.km}} km</text></view><view class="row"><text>预计抵达</text><text>{{quote.eta}}</text></view></view><view class="note">寄出后，对方先知道有信在路上，到达后才能读到内容。</view><button class="btn" bindtap="send">确认寄出</button></block>
+  <block wx:elif="{{dialog === 'journey'}}"><view class="journey"><image class="landscape" src="/assets/landscape.svg"/><image class="journey-animal" src="/assets/{{reading.asset}}"/></view><view class="note">来自 {{reading.fromName}} 的一封信。内容还封在信里，等抵达再慢慢读。</view><view class="quote"><view>{{reading.fromCity}} → {{reading.toCity}} · {{reading.km}} km</view><view>{{reading.eta}} 抵达</view><view>还有 {{reading.remaining}}</view></view><button class="btn" bindtap="reply">我也写一封</button></block>
+  <block wx:else><view class="small">{{reading.fromName}} 寄给 {{reading.toName}}{{reading.sample ? ' · 示例内容' : ''}}</view><text class="read-body" selectable>{{reading.body}}</text><view class="signature">{{reading.fromName}}<view>{{reading.sentAt}}</view></view><view class="note">{{reading.fromCity}} → {{reading.toCity}} · {{reading.km}} km</view><button class="btn light" bindtap="reply">我也写一封</button></block>
+ </scroll-view></view>
+</view>
